@@ -1,5 +1,3 @@
-import "../styles.css";
-
 export default function leftMenu() {
   return (
     <div className="leftmenu">
@@ -7,7 +5,7 @@ export default function leftMenu() {
       <div className="leftmenu_menu">
         <div className="leftmenu_menu_item">
           <img
-            src="https://uploads-ssl.webflow.com/6112a3256062ec3288e080f7/6112a882c50c617ca1d277bb_Vector.svg"
+            src="/images/user.svg"
             loading="lazy"
             alt=""
             className="menu_item_img"
@@ -16,7 +14,7 @@ export default function leftMenu() {
         </div>
         <div className="leftmenu_menu_item">
           <img
-            src="https://uploads-ssl.webflow.com/6112a3256062ec3288e080f7/6112afaac50c610f9dd29ea7_ray.svg"
+            src="/images/ray.svg"
             loading="lazy"
             alt=""
             className="menu_item_img"
@@ -25,7 +23,7 @@ export default function leftMenu() {
         </div>
         <div className="leftmenu_menu_item">
           <img
-            src="https://uploads-ssl.webflow.com/6112a3256062ec3288e080f7/6112b02645088c5bd3144ee1_chat.svg"
+            src="/images/chat.svg"
             loading="lazy"
             alt=""
             className="menu_item_img"
