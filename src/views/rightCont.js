@@ -2,6 +2,11 @@ import GanaciasyPremios from "./ganaciasyPremios";
 import Racha from "./racha";
 import Ranking from "./ranking";
 import TopMenu from "./topMenu";
+import Encuestas from "./encuestas";
+import Foros from "./foros";
+import Cumpleanos from "./cumpleanos";
+import DescubrirWidgets from "./descubrirWidgets";
+import Comunicados from "./comunicados";
 
 export default function rightCont() {
   return (
@@ -61,6 +66,11 @@ export default function rightCont() {
       <GanaciasyPremios />
       <Racha />
       <Ranking />
+      <Encuestas />
+      <Foros />
+      <Cumpleanos />
+      <DescubrirWidgets />
+      <Comunicados />
     </div>
   );
 }
