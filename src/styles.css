@@ -15,7 +15,6 @@
    .main {
      width: 100%;
      min-height: 100vh;
-     padding: 20px 80px 50px 20px;
      background-color: #111c4e;
      background-image: url("../images/bg.png");
      background-position: 0px 0px;
@@ -25,9 +24,11 @@
    }
    
    .leftmenu {
-     width: 94px;
-     height: 86vh;
-     padding-top: 33px;
+    position: fixed;
+    z-index: 4;
+    width: auto;
+    height: 92vh;
+    padding-top: 33px;
      padding-bottom: 33px;
      border-radius: 8px;
      background-color: #1e2c6e;
@@ -44,6 +45,7 @@
      background-position: 50% 50%;
      background-size: 80%;
      background-repeat: no-repeat;
+     cursor: pointer;
    }
    
    .leftmenu_menu {
@@ -56,7 +58,7 @@
      display: -ms-flexbox;
      display: flex;
      width: 100%;
-     padding: 18px 10px;
+     padding: 18px 8px;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
      -webkit-flex-direction: column;
@@ -85,7 +87,7 @@
    .menu_item_txt {
      font-family: Poppins, sans-serif;
      color: rgba(191, 221, 253, 0.6);
-     font-size: 12px;
+     font-size: 11px;
      line-height: 16px;
      text-align: center;
      letter-spacing: 0.4px;
@@ -113,6 +115,10 @@
      display: -webkit-flex;
      display: -ms-flexbox;
      display: flex;
+     overflow: hidden;
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 88px;
      -webkit-box-orient: horizontal;
      -webkit-box-direction: normal;
      -webkit-flex-direction: row;
@@ -207,7 +213,7 @@
      display: -ms-flexbox;
      display: flex;
      width: 100%;
-     padding-right: 50px;
+     padding-right: 30px;
      padding-left: 30px;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
@@ -816,8 +822,10 @@
      display: flex;
      overflow: visible;
      width: 100%;
-     margin-bottom: 12px;
-     padding-left: 16px;
+     margin-bottom: 0px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  padding-left: 0px;
      -webkit-box-align: stretch;
      -webkit-align-items: stretch;
      -ms-flex-align: stretch;
@@ -826,16 +834,16 @@
      grid-template-columns: 3.25fr 1fr 1fr 1fr 3.25fr;
      -ms-grid-rows: auto auto auto auto;
      grid-template-rows: auto auto auto auto;
+     border-bottom: 1px solid hsla(0, 0%, 100%, 0.22);
    }
    
    .rankingcont_list.line_under {
+    padding-left: 0px;
      border-bottom: 1px solid rgba(191, 221, 253, 0.25);
    }
    
    .rankingcont_list_tit {
-     width: 300px;
      min-height: 24px;
-     min-width: 300px;
      padding-bottom: 4px;
      font-family: Poppins, sans-serif;
      color: rgba(191, 221, 253, 0.85);
@@ -949,17 +957,18 @@
    }
    
    .leftmenuopen {
-     position: absolute;
-     left: 114px;
+    position: fixed;
+    left: 109px;
      top: 20px;
      right: auto;
      bottom: 0%;
-     z-index: 3;
-     display: none;
-     width: 400px;
-     height: 86vh;
-     padding-top: 20px;
-     padding-bottom: 33px;
+     z-index: 4;
+  display: block;
+  overflow: auto;
+  width: 500px;
+  height: 92vh;
+  min-width: 500px;
+  padding: 20px 20px 33px;
      border-radius: 8px;
      background-color: #1e2c6e;
    }
@@ -1067,6 +1076,7 @@
    
    .foros_cont {
      width: 100%;
+     margin-top: 30px;
    }
    
    .foros_list_el {
@@ -1343,6 +1353,254 @@
      width: 100%;
      padding-bottom: 20px;
    }
+
+   .leftmenuclose {
+    position: absolute;
+    left: auto;
+    top: 10px;
+    right: 10px;
+    bottom: auto;
+    width: 22px;
+    height: 22px;
+    background-image: url("https://uploads-ssl.webflow.com/6112a3256062ec3288e080f7/6154b0198385e7d05fffd0f0_close.svg");
+    background-position: 50% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  .leftmenutit {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: Poppins, sans-serif;
+    color: #fff;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+  
+  .leftmenucont_pro {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.52);
+  }
+  
+  .close_session {
+    font-family: 'Press Start 2P', sans-serif;
+    color: #63b4f6;
+    font-size: 11px;
+    line-height: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .profile_cont_img2 {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    background-image: url("https://uploads-ssl.webflow.com/6112a3256062ec3288e080f7/612417d013b08d66aadf62d4_profile.jpg");
+    background-position: 50% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  
+  .profile_cont_img2.profilecontlistimg {
+    width: 60px;
+    height: 50px;
+    border-radius: 6px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .leftmenulist {
+    margin-bottom: 26px;
+    padding-left: 0px;
+  }
+  
+  .leftmenuitem {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.22);
+  }
+  
+  .leftmenuitem_img {
+    width: 18px;
+    height: auto;
+    margin-right: 18px;
+  }
+  
+  .leftmenuitem_p {
+    margin-bottom: 0px;
+    font-family: Roboto, sans-serif;
+    color: hsla(0, 0%, 100%, 0.87);
+    font-size: 14px;
+    line-height: 14px;
+  }
+  
+  .leftmenucont {
+    position: relative;
+    z-index: 10;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  
+  .leftmenuoverlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(9, 13, 34, 0.77);
+  }
+  
+  .leftmenup {
+    margin-top: -15px;
+    font-family: Poppins, sans-serif;
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  
+  .dueloscont_list_tit {
+    min-height: 24px;
+    padding-bottom: 4px;
+    font-family: Poppins, sans-serif;
+    color: rgba(191, 221, 253, 0.85);
+    font-weight: 600;
+  }
+  
+  .dueloscontlist_col2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80px;
+    min-width: 80px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .dueloscontlist_col3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80px;
+    min-width: 80px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .dueloscontlist_col4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80px;
+    min-width: 80px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .dueloscontlist_col1 {
+    width: 160px;
+    min-width: 160px;
+  }
+  
+  .dueloscont_listcont {
+    overflow: auto;
+    width: auto;
+    margin-top: 26px;
+    padding-bottom: 20px;
+  }
+  
+  .duelocont_item {
+    width: 160px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px 6px 10px 0px;
+    border-style: none;
+    border-width: 1px;
+    border-color: rgba(191, 221, 253, 0.25);
+    border-radius: 10px;
+  }
+  
+  .dueloscont_itemgroup_item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    margin-left: 0px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(191, 221, 253, 0.25);
+    border-radius: 6px;
+    font-family: Poppins, sans-serif;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .dueloscont_itemgroup_item.bg_item {
+    background-image: url("https://uploads-ssl.webflow.com/6112a3256062ec3288e080f7/612417d013b08d66aadf62d4_profile.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
    
    @media screen and (max-width: 991px) {
      .main {
@@ -1561,6 +1819,11 @@
        margin-right: 0px;
        margin-bottom: 24px;
      }
+     
+  .duelocont_item {
+    width: 29%;
+    margin-bottom: 8px;
+  }
    }
    
    @media screen and (max-width: 767px) {
@@ -1570,7 +1833,21 @@
      }
    
      .leftmenu {
-       display: none;
+        left: 0%;
+        top: auto;
+        right: 0%;
+        bottom: 0%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 30px;
+        padding: 8px;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
      }
    
      .topmenu {
@@ -1782,6 +2059,16 @@
        width: 80px;
      }
    
+     .leftmenuopen {
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        width: 100%;
+        height: auto;
+        min-width: 100%;
+      }
      .encuestas_cont {
        margin-top: 20px;
        margin-bottom: 30px;
@@ -1905,6 +2192,37 @@
      .comunicados_el_tit {
        margin-top: 0px;
      }
+     .profile_cont_img2 {
+        width: 60px;
+        height: 60px;
+      }
+    
+      .profile_cont_img2.profilecontlistimg {
+        height: 50px;
+      }
+    
+      .dueloscontlist_col2 {
+        width: 80px;
+      }
+    
+      .dueloscontlist_col3 {
+        width: 80px;
+      }
+    
+      .dueloscontlist_col4 {
+        width: 80px;
+      }
+    
+      .dueloscontlist_col1 {
+        width: 280px;
+      }
+    
+      .duelocont_item {
+        width: 30%;
+        margin-right: 10px;
+        margin-bottom: 16px;
+        margin-left: 0px;
+      }
    }
    
    @media screen and (max-width: 479px) {
@@ -2078,6 +2396,14 @@
        font-size: 26px;
        line-height: 33px;
      }
+     .dueloscontlist_col1 {
+        padding-bottom: 0px;
+      }
+    
+      .duelocont_item {
+        width: 100%;
+        margin-right: 0px;
+      }
    }
    @font-face {
      font-family: 'Proximanova';

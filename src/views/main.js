@@ -6,8 +6,8 @@ import RightCont from "./rightCont";
 export default function leftMenu() {
   return (
     <div className="main">
+      <LeftMenu />
       <div className="container">
-        <LeftMenu />
         <RightCont />
       </div>
     </div>
